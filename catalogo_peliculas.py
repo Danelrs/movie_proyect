@@ -10,8 +10,8 @@ import mysql.connector
 db_connection = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="(Your_password)",
-    database="(Database_name)"
+    password="Rolonlol135",
+    database="catalogo_peliculas"
 )
 
 #! Creación de un cursor, un "apuntador" que sirve para ejecutar los
