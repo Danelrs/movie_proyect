@@ -154,3 +154,5 @@ def eliminarPelicula():
     eliminar_pelicula(id_pelicula)
     return redirect(url_for('home'))
 
+app.run(debug=True)
+
