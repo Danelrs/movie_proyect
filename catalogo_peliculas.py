@@ -3,7 +3,6 @@ from flask import render_template
 from flask import request
 from flask import abort, redirect, url_for
 from flask import make_response
-from tkinter import messagebox
 import mysql.connector
 
 #! Ingreso a la base de datos
