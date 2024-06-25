@@ -3,6 +3,7 @@ from flask import render_template
 from flask import request
 from flask import abort, redirect, url_for
 from flask import make_response
+from tkinter import messagebox
 import mysql.connector
 
 #! Ingreso a la base de datos
@@ -88,14 +89,14 @@ def home():
     if (is_user_logged_in()):
         peliculas = obtener_peliculas()
         return render_template('dashboard.html', peliculas=peliculas, total_peliculas=len(peliculas))
-    error = None
+    messagebox = None
     if request.method == 'POST':
         if valid_login(request.form['username'],
                        request.form['password']):
             return log_user(request.form['username'])
         else:
-            error = 'Invalid username/password'
-    return render_template('login.html', error=error)
+            messagebox = 'Invalid username/password'
+    return render_template('login.html', messagebox = messagebox)
 
 
 @app.route("/registro", methods=["POST", "GET"])
